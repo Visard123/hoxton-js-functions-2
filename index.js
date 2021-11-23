@@ -26,13 +26,26 @@ Tips
 let userLetter=prompt("Please enter a letter")
 function checkingIfUsersLetterMatch( userLetter){
 
- users.filter(function (user){
+    users.filter(function (user){
     if (user.name.includes(userLetter)) {
              
    console.log (`Hey, ${user.name}`);
     }
  })
+ setInterval(function() { 
+    
+     return checkingIfUsersLetterMatch(userLetter)
+    }, 2000);
 
 
+
+   
  let userIdNum=Number (prompt ("Please Enter your ID"))
+ 
+ todos.filter( function (todo){
+    if (userIdNum===users.userId){
+      
     }
+     return todo.completed===false
+ })
+    
